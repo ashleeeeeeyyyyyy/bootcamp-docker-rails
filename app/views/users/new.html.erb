@@ -1,0 +1,9 @@
+<h1>This is the new users page</h1>
+
+<%= form_with model: @user, method: :post do |form| %>
+  <%= form.text_field :firstname %>
+  <%= form.text_field :lastname %>
+  <%= form.text_field :username %>
+  <%= form.password_field :password %>
+  <%= form.submit "Submit", class: "btn btn-primary" %>
+<% end %>
