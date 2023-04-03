@@ -3,6 +3,11 @@ class User < ApplicationRecord   # Include default devise modules. Others availa
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :authentication_keys => [:username || :email]
 
+  # attr_writer :login
+
+  # def login
+  #   @login || self.username || self.email
+  # end
   # def username
   #   email.split('@')[0].capitalize
   # end
