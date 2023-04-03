@@ -1,5 +1,7 @@
 <h1>Users list page</h1>
+
 <h6>Current User: <%= current_user.username %></h6>
+<%= link_to "Sign Out", signout_path, class: "btn btn-danger" %>
 
 <table class="table table-striped table-bordered table-hover text-center">
   <thead class="thead-dark">
@@ -27,4 +29,3 @@
 </table>
 
 <td><%= link_to 'Add New User', new_user_path, class: "btn btn-primary" %></td>
-<%= link_to "Sign Out", signout_path, class: "btn btn-danger" %>
