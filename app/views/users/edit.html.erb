@@ -2,47 +2,35 @@
 
 
 <%= form_with model: @user do |form| %>
-<div class="align-items-center">
-  <div>
+  <div class="align-items-center">
+    <div>
       <%= form.label :firstname %><br>
       <%= form.text_field :firstname, class: "form-control" %><br>
-      
-      <% @user.errors.full_messages_for(:firstname).each do |message| %>
-          <div><%= message %></div>
-      <% end %>
-  </div>
+    </div>
 
-  <div>
+    <div>
       <%= form.label :lastname %><br>
       <%= form.text_field :lastname, class: "form-control" %><br>
-      
-      <% @user.errors.full_messages_for(:lastname).each do |message| %>
-          <div><%= message %></div>
-      <% end %>
-  </div>
+    </div>
 
-  <div>
+    <div>
       <%= form.label :username %><br>
       <%= form.text_field :username, class: "form-control" %><br>
+    </div>
 
-      <% @user.errors.full_messages_for(:username).each do |message| %>
-          <div><%= message %></div>
-      <% end %>
-  </div>
-
-  <div>
+    <div>
       <%= form.label :password %><br>
       <%= form.password_field :password, class: "form-control" %><br>
+    </div>
 
-      <% @user.errors.full_messages_for(:password).each do |message| %>
-          <div><%= message %></div>
-      <% end %>
-  </div>
+    <div>
+      <%= form.submit "Submit", class: "btn btn-success" %>
+    </div>
 
-  <div>
-      <%= form.submit "Submit", class: "btn btn-primary" %>
-      <%= link_to "Delete User", user_path(@user),class: "btn btn-danger", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+    <div><br>
+      <%= link_to 'Go Back', users_path, class: "btn btn-primary" %>
+      <%= link_to "Delete User", user_path(@user), class: "btn btn-danger", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+    </div>
   </div>
-</div>
 <% end %>
 

@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   # post 'users/new', to: 'users#create'
   
-  resources :users, only: [:index, :new, :edit, :update, :destroy]
+  resources :users, only: [:index, :new, :edit, :create, :update, :destroy]
 end
